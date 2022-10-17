@@ -5,74 +5,84 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="path-admin">PRODUCTS LIST</b></div>
+<div class="content-main">
+    <div id="content-main-dashboard">
+        <div id="product-title-header">
+            <div id="product-title-1" style="width: 25%;">
+                <b>Filter by Catetory:</b>
+                <form>
+                    <select name="ddlCategory">
+                        <option value="catid1">--- Select ---</option>
+                        <option value="catid1">Smart Phone</option>
+                        <option value="catid2">Computer</option>
+                        <option value="catid3">Television</option>
+                        <option value="catid4">Electronic</option>
+                    </select>
+                    <input type="submit" value="Filter">
+                </form>
+            </div>
+            <div id="product-title-2" style="width: 55%;">
+                <form>
+                    <input type="text" name="txtSearch" placeholder="Enter product name to search" />
+                    <input type="submit" value="Search" />
+                </form>
+            </div>
+            <div id="product-title-3" style="width: 20%;">
+                <a href="~/Admin/Product/Create">Create a new Product</a>
+                <form action="">
+                    <label for="upload-file">Import .xls or .xlsx file</label>
+                    <input type="file" name="file" id="upload-file" />
+                </form>
+            </div>
+        </div>
+        <div id="order-table-admin">
+            <table id="orders">
+                <tr>
+                    <th>ProductID</th>
+                    <th>ProductName</th>
+                    <th>UnitPrice</th>
+                    <th>Unit</th>
+                    <th>UnitsInStock</th>
+                    <th>Category</th>
+                    <th>Discontinued</th>
+                    <th></th>
+                </tr>
+                @foreach (var item in Model.Product)
+                {
+                    <tr>
+                        <td>
+                            <a href="order-detail.html?id=5">@Html.DisplayFor(modelItem => item.ProductId)</a>
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UnitPrice)
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.QuantityPerUnit)</td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UnitsInStock)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                        </td>
+                        <td>
+                            @if(@item.Discontinued == false){
+                                <p>False</p>
+                            }else{
+                                <p>True</p>
+                            }
+                        </td>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].ProductName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].QuantityPerUnit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].UnitPrice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].UnitsInStock)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].UnitsOnOrder)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].ReorderLevel)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].Discontinued)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product[0].Category)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Product) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuantityPerUnit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnitPrice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnitsInStock)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UnitsOnOrder)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReorderLevel)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Discontinued)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.CategoryId)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ProductId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.ProductId">Edit</a> |
+                            <a asp-page="./Delete" asp-route-id="@item.ProductId">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        
+    </div>
+</div>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NrsQsX0usay5OJFFkm+H7BTVIUJv1lBJC7JMSdE3VPg=",
+  "Hash": "mUK4mMj3JVBpe28g7T/KR0wzBEFpvA16Xp2GPO1m1yY=",
   "Source": "WebRazor",
   "BasePath": "_content/WebRazor",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebRazor\\wwwroot",
       "Source": "WebRazor",
-      "ContentRoot": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
       "BasePath": "_content/WebRazor",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\css\\style.css",
       "SourceId": "WebRazor",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
       "BasePath": "_content/WebRazor",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\css\\style1.css",
+      "Identity": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\css\\style1.css",
       "SourceId": "WebRazor",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
       "BasePath": "_content/WebRazor",
       "RelativePath": "css/style1.css",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\css\\style1.css"
     },
     {
-      "Identity": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\img\\1.jpg",
+      "Identity": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\img\\1.jpg",
       "SourceId": "WebRazor",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
       "BasePath": "_content/WebRazor",
       "RelativePath": "img/1.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\img\\1.jpg"
     },
     {
-      "Identity": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\img\\2.jpg",
+      "Identity": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\img\\2.jpg",
       "SourceId": "WebRazor",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
       "BasePath": "_content/WebRazor",
       "RelativePath": "img/2.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\img\\2.jpg"
     },
     {
-      "Identity": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\img\\logo.png",
+      "Identity": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\img\\logo.png",
       "SourceId": "WebRazor",
       "SourceType": "Discovered",
-      "ContentRoot": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
       "BasePath": "_content/WebRazor",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
