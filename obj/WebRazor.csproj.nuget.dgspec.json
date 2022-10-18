@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\WebRazor.csproj": {}
+    "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\WebRazor.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\WebRazor.csproj": {
+    "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\WebRazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\WebRazor.csproj",
+        "projectUniqueName": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\WebRazor.csproj",
         "projectName": "WebRazor",
-        "projectPath": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\WebRazor.csproj",
-        "packagesPath": "C:\\Users\\dang.tran2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\obj\\",
+        "projectPath": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\WebRazor.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "F:\\Documents\\FPT_University\\Semester_7\\PRN221\\WebRazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\dang.tran2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -80,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

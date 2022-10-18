@@ -37,7 +37,6 @@ namespace WebRazor.Pages.Admin.Product
             }
 
             var qr = (from a in _context.Products orderby a.ProductId ascending select a).Skip((currentPage - 1) * pageSize).Take(pageSize);
-
             if (!string.IsNullOrEmpty(txtSearch))
             {
                 Product = qr.Where(a => a.ProductName.Contains(txtSearch)).ToList();

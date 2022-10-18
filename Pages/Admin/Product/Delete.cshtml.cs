@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
+using WebRazor.Hubs;
 using WebRazor.Models;
 
 namespace WebRazor.Pages.Admin.Product
@@ -12,10 +14,11 @@ namespace WebRazor.Pages.Admin.Product
     public class DeleteModel : PageModel
     {
         private readonly WebRazor.Models.PRN221DBContext _context;
-
-        public DeleteModel(WebRazor.Models.PRN221DBContext context)
+        private readonly IHubContext<HubServer> hubContext;
+        public DeleteModel(WebRazor.Models.PRN221DBContext context, IHubContext<HubServer> hubContext)
         {
             _context = context;
+            this.hubContext = hubContext;
         }
 
         [BindProperty]
@@ -54,8 +57,9 @@ namespace WebRazor.Pages.Admin.Product
                 Product = product;
                 _context.Products.Remove(Product);
                 await _context.SaveChangesAsync();
-            }
 
+            }
+            await hubContext.Clients.All.SendAsync("ReloadProduct");
             return RedirectToPage("./Index");
         }
     }
