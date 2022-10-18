@@ -4,99 +4,72 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].OrderDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].RequiredDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShippedDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].Freight)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShipName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShipAddress)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShipCity)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShipRegion)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShipPostalCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].ShipCountry)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].Customer)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order[0].Employee)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Order) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.OrderDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RequiredDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShippedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Freight)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipAddress)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipCity)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipRegion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipPostalCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShipCountry)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Customer.CustomerId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employee.FirstName)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.OrderId">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.OrderId">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.OrderId">Delete</a>
-            </td>
-        </tr>
+@{
+    var pagingmodel = new WebRazor.Helpers.PagingModel()
+            {
+                currentPage = Model.currentPage,
+                countPages = Model.countPages,
+                generateUrl = (int? currentPage) => Url.Page("/Admin/Order/Index", new { currentPage = currentPage })
+            };
 }
-    </tbody>
-</table>
+
+<div class="path-admin">ORDERS LIST</b></div>
+<div class="content-main">
+    <div id="content-main-dashboard">
+        <div id="order-title">
+            <b>Filter by Order date:</b>
+            <form method="post" asp-page="./Index">
+                From: <input type="date" name="txtStartOrderDate" />
+                To: <input type="date" name="txtEndOrderDate" />
+                <input type="submit" value="Filter">
+            </form>
+        </div>
+        <div id="order-table">
+            <table id="orders">
+                <tr>
+                    <th>OrderID</th>
+                    <th>OrderDate</th>
+                    <th>RequiredDate</th>
+                    <th>ShippedDate</th>
+                    <th>Employee</th>
+                    <th>Customer</th>
+                    <th>Freight($)</th>
+                    <th>Status</th>
+                </tr>
+
+                <tbody>
+                    @foreach (var item in Model.Order)
+                    {
+                        <tr>
+                            <td><a href="order-detail.html?id=@item.OrderId">@Html.DisplayFor(modelItem => item.OrderId)</a></td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.OrderDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.RequiredDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShippedDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Employee.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Customer.ContactName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Freight)
+                            </td>
+                            <td style="color: green;">Completed</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div id="paging">
+            <div class="pagination">
+                <partial name="_Paging" model="@pagingmodel" />
+            </div>
+        </div>
+    </div>
+</div>

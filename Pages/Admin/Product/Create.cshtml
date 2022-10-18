@@ -45,54 +45,6 @@
             <div class="msg-error">@ViewData["msg"]</div>
         </div>
     </form>
-
-	@*<form method="post">
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<div class="content-main-1">
-			<label>ProductName (*)</label><br />
-			<input asp-for="Product.ProductName" class="form-control" />
-			<span asp-validation-for="Product.ProductName" class="text-danger"></span>
-			<span class="msg-error">Product name is required.</span><br />
-
-			<label asp-for="Product.UnitPrice" class="control-label"></label><br />
-			<input asp-for="Product.UnitPrice" class="form-control" />
-			<span asp-validation-for="Product.UnitPrice" class="text-danger"></span>
-
-			<label>Quantity per unit:</label><br />
-			<input asp-for="Product.QuantityPerUnit" class="form-control" />
-			<span asp-validation-for="Product.QuantityPerUnit" class="text-danger"></span>
-
-			<label>Units in stock (*):</label><br />
-			<input asp-for="Product.UnitsInStock" class="form-control" />
-			<span asp-validation-for="Product.UnitsInStock" class="text-danger"></span>
-			<span class="msg-error">Units in stock is required.</span><br />
-		</div>
-		<div class="content-main-1">
-			<div class="form-group">
-				<label>Category(*)</label><br />
-				<select asp-for="Product.CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-			</div>
-			<br />
-			<span class="msg-error">Product name is required.</span><br />
-
-			
-			<label>Reorder level:</label><br />
-			<input type="text" name="txtReorderLevel" id="" disabled><br />
-
-
-			<label>Units on order:</label><br />
-			<input type="text" name="txtUnitsOnOrder" id="" disabled><br />
-
-
-			<label class="form-check-label">
-				@Html.DisplayNameFor(model => model.Product.Discontinued):<br /><input class="form-check-input" asp-for="Product.Discontinued" />
-			</label>
-
-			<div class="form-group">
-				<input type="submit" value="Save" class="btn btn-primary" />
-			</div>
-		</div>
-	</form>*@
 </div>
 
 @section Scripts {

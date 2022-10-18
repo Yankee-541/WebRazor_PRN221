@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mUK4mMj3JVBpe28g7T/KR0wzBEFpvA16Xp2GPO1m1yY=",
+  "Hash": "9VTinwrBXrxxGlTZLY89P6Z3pfpqZBRbYSmg4ij2iU8=",
   "Source": "WebRazor",
   "BasePath": "_content/WebRazor",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\js\\site.js",
+      "SourceId": "WebRazor",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\dang.tran2\\Documents\\Document\\Source code\\FPT\\pprn\\WebRazor_PRN221\\wwwroot\\",
+      "BasePath": "_content/WebRazor",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\site.js"
     }
   ]
 }

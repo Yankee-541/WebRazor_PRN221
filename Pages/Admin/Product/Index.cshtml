@@ -4,26 +4,29 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+@{
+    var pagingmodel = new WebRazor.Helpers.PagingModel()
+            {
+                currentPage = Model.currentPage,
+                countPages = Model.countPages,
+                generateUrl = (int? currentPage) => Url.Page("/Admin/Product/Index", new { currentPage = currentPage })
+            };
+}
 <div class="path-admin">PRODUCTS LIST</b></div>
 <div class="content-main">
     <div id="content-main-dashboard">
         <div id="product-title-header">
             <div id="product-title-1" style="width: 25%;">
                 <b>Filter by Catetory:</b>
-                <form>
-                    <select name="ddlCategory">
-                        <option value="catid1">--- Select ---</option>
-                        <option value="catid1">Smart Phone</option>
-                        <option value="catid2">Computer</option>
-                        <option value="catid3">Television</option>
-                        <option value="catid4">Electronic</option>
+                <form method="get" asp-page="./Index">
+                    <select >
+                        <option>--- Select ---</option>
                     </select>
                     <input type="submit" value="Filter">
                 </form>
             </div>
             <div id="product-title-2" style="width: 55%;">
-                <form>
+                <form method="get" asp-page="./Index">
                     <input type="text" name="txtSearch" placeholder="Enter product name to search" />
                     <input type="submit" value="Search" />
                 </form>
@@ -52,7 +55,7 @@
                 {
                     <tr>
                         <td>
-                            <a href="order-detail.html?id=5">@Html.DisplayFor(modelItem => item.ProductId)</a>
+                            <a href="order-detail.html?id=@item.ProductId">@Html.DisplayFor(modelItem => item.ProductId)</a>
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.ProductName)
@@ -83,6 +86,10 @@
                 }
             </table>
         </div>
-        
+        <div id="paging">
+            <div class="pagination">
+                <partial name="_Paging" model="@pagingmodel" />
+            </div>
+        </div>
     </div>
 </div>
