@@ -9,7 +9,7 @@
             {
                 currentPage = Model.currentPage,
                 countPages = Model.countPages,
-                generateUrl = (int? currentPage) => Url.Page("/Admin/Product/Index", new { currentPage = currentPage })
+                generateUrl = (int? currentPage) => Url.Page("/Admin/Product/Index", new { currentPage = currentPage, search = Model.search, categoryChoose = Model.categoryChoose })
             };
 }
 <div class="path-admin">PRODUCTS LIST</b></div>
@@ -19,15 +19,20 @@
             <div id="product-title-1" style="width: 25%;">
                 <b>Filter by Catetory:</b>
                 <form method="get" asp-page="./Index">
-                    <select >
+                    <select asp-for="categoryChoose">
                         <option>--- Select ---</option>
+                        @foreach (var cate in Model.Categories)
+                        {
+                            int id = @cate.CategoryId;
+                            <option value="@cate.CategoryId">@cate.CategoryName</option>
+                        }
                     </select>
                     <input type="submit" value="Filter">
                 </form>
             </div>
             <div id="product-title-2" style="width: 55%;">
                 <form method="get" asp-page="./Index">
-                    <input type="text" name="txtSearch" placeholder="Enter product name to search" />
+                    <input asp-for="search" type="text" placeholder="Enter product name to search" />
                     <input type="submit" value="Search" />
                 </form>
             </div>
